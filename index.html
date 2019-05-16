@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="http://cdn.sencha.com/ext/gpl/4.2.1/ext-debug.js">    </script>
+    <link rel="stylesheet" type="text/css" href="http://cdn.sencha.com/ext/gpl/4.2.1/resources/css/ext-all.css" />
+    <!--<script type="text/javascript" src="app.js"></script>-->
+    <script>
+        Ext.Loader.setConfig({
+            enabled: true,
+            path: { 'Classes' : 'Classes' }
+        });
+        Ext.require('Classes.Manager');
+        Ext.onReady(function(){
+           /* Classes.Person.getinfo();*/
+           /* var eugene1 = Ext.create('Classes.Person');
+            eugene1.getinfo();*/
+            var eugene = Ext.create('person');
+            eugene.getinfo();
+            eugene = Ext.create('Classes.Person', 'Anders', 'Heilsberg');
+            eugene.getinfo();
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>
